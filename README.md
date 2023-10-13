@@ -1,2 +1,2 @@
 # version2
-pruebasdepipelines
+Ejercicios de prueba
