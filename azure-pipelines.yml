@@ -76,7 +76,6 @@ steps:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
 
-
 #Métricas de cobertura de Código 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet test'
