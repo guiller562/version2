@@ -12,6 +12,7 @@ pool:
 steps:
 - task: SonarQubePrepare@5
   inputs:
+    SonarQube: 'version2' # Reemplaza 'NombreDeTuInstanciaSonarQube' con el nombre de tu instancia SonarQube.
     scannerMode: 'MSBuild'
 - task: SonarQubeAnalyze@5
   inputs:
@@ -19,6 +20,7 @@ steps:
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
