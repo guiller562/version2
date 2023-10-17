@@ -10,21 +10,18 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-# Starter pipeline
 - task: SonarQubePrepare@5
   inputs:
     scannerMode: 'MSBuild'
 - task: SonarQubeAnalyze@5
   inputs:
     jdkversion: 'JAVA_HOME_11_X64'
-
- - task: SonarQubePublish@5
-   inputs:
-     pollingTimeoutSec: '300'
-
-     
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
