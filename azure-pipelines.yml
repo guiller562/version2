@@ -12,10 +12,13 @@ pool:
 steps:
 - task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'https://sonarcloud.io/project/configuration?id=sonar15_ee' # Reemplaza 'NombreDeTuInstanciaSonarQube' con el nombre de tu instancia SonarQube.
+    SonarQube: 'sonar15_ee' # Reemplaza 'NombreDeTuInstanciaSonarQube' con el nombre de tu instancia SonarQube.
 
     scannerMode: 'MSBuild'
     projectKey: 'sonar15_ee' # Asegúrate de reemplazar 'my_project_key' con la clave de tu proyecto en SonarQube.
+
+  
+    
 - task: SonarQubeAnalyze@5
   inputs:
     jdkversion: 'JAVA_HOME_11_X64'
