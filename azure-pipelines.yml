@@ -22,10 +22,6 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
-
-
-
-
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
