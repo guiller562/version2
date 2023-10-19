@@ -14,7 +14,7 @@ steps:
   inputs:
     SonarQube: 'https://sonar15.com' # Aquí debes proporcionar la URL de tu instancia de SonarQube
     scannerMode: 'MSBuild'
-    projectKey: 'sonar15_ee'  # Asegúrate de reemplazar 'sonar15_ee' con la clave de tu proyecto en SonarQube.
+    projectKey: 'sonar15'  # Asegúrate de reemplazar 'sonar15_ee' con la clave de tu proyecto en SonarQube.
 - task: SonarQubeAnalyze@5
   inputs:
     jdkversion: 'JAVA_HOME_11_X64'
