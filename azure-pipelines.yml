@@ -12,23 +12,16 @@ pool:
 steps:
 - task: SonarQubePrepare@5
   inputs:
-  SonarScanner.MSBuild.exe begin \
-  /o:"sonar15" \
-  /k:"sonar15_ee" \
-  /d:sonar.host.url="https://sonarcloud.io"
-  SonarQube: 'sonar15_ee' # Reemplaza 'NombreDeTuInstanciaSonarQube' con el nombre de tu instancia SonarQube.
-
+    SonarQube: 'https://sonar15.com' # Aquí debes proporcionar la URL de tu instancia de SonarQube
     scannerMode: 'MSBuild'
-    projectKey: 'sonar15_ee' # Asegúrate de reemplazar 'my_project_key' con la clave de tu proyecto en SonarQube.
-
-  
-    
+    projectKey: 'sonar15_ee'  # Asegúrate de reemplazar 'sonar15_ee' con la clave de tu proyecto en SonarQube.
 - task: SonarQubeAnalyze@5
   inputs:
     jdkversion: 'JAVA_HOME_11_X64'
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
+
 
 
 
